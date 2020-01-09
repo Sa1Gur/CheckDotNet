@@ -825,7 +825,7 @@ int main()
 		bNetfx472Installed || bNetfx48Installed;
 
 	if (!bDotNet)
-		printf("On your system has not been found any .NET framework!\n\r\n\rPlease consider to install the latest .NET Framework: https://www.microsoft.com/de-de/download/details.aspx?id=30653");
+		printf(".NET framework not found!\n\r\n\rInstall from: https://dotnet.microsoft.com/download");
 
 	return (int)bDotNet;
 }
