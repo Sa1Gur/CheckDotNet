@@ -19,24 +19,24 @@
 
 /* Leo, 20.05.2016 Needs Advapi32.dll to be linked! */
 
-const TCHAR *g_szNetfx10RegKeyName = _T("Software\\Microsoft\\.NETFramework\\Policy\\v1.0");
-const TCHAR *g_szNetfx10RegKeyValue = _T("3705");
-const TCHAR *g_szNetfx10SPxMSIRegKeyName = _T("Software\\Microsoft\\Active Setup\\Installed Components\\{78705f0d-e8db-4b2d-8193-982bdda15ecd}");
-const TCHAR *g_szNetfx10SPxOCMRegKeyName = _T("Software\\Microsoft\\Active Setup\\Installed Components\\{FDC11A6F-17D1-48f9-9EA3-9051954BAA24}");
-const TCHAR *g_szNetfx11RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v1.1.4322");
-const TCHAR *g_szNetfx20RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v2.0.50727");
-const TCHAR *g_szNetfx30RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v3.0\\Setup");
-const TCHAR *g_szNetfx30SpRegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v3.0");
-const TCHAR *g_szNetfx30RegValueName = _T("InstallSuccess");
-const TCHAR *g_szNetfx35RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v3.5");
-const TCHAR *g_szNetfx40ClientRegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Client");
-const TCHAR *g_szNetfx40FullRegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full");
-const TCHAR *g_szNetfx40SPxRegValueName = _T("Servicing");
-const TCHAR *g_szNetfx45RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full");
-const TCHAR *g_szNetfx45RegValueName = _T("Release");
-const TCHAR *g_szNetfxStandardRegValueName = _T("Install");
-const TCHAR *g_szNetfxStandardSPxRegValueName = _T("SP");
-const TCHAR *g_szNetfxStandardVersionRegValueName = _T("Version");
+const TCHAR* g_szNetfx10RegKeyName = _T("Software\\Microsoft\\.NETFramework\\Policy\\v1.0");
+const TCHAR* g_szNetfx10RegKeyValue = _T("3705");
+const TCHAR* g_szNetfx10SPxMSIRegKeyName = _T("Software\\Microsoft\\Active Setup\\Installed Components\\{78705f0d-e8db-4b2d-8193-982bdda15ecd}");
+const TCHAR* g_szNetfx10SPxOCMRegKeyName = _T("Software\\Microsoft\\Active Setup\\Installed Components\\{FDC11A6F-17D1-48f9-9EA3-9051954BAA24}");
+const TCHAR* g_szNetfx11RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v1.1.4322");
+const TCHAR* g_szNetfx20RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v2.0.50727");
+const TCHAR* g_szNetfx30RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v3.0\\Setup");
+const TCHAR* g_szNetfx30SpRegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v3.0");
+const TCHAR* g_szNetfx30RegValueName = _T("InstallSuccess");
+const TCHAR* g_szNetfx35RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v3.5");
+const TCHAR* g_szNetfx40ClientRegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Client");
+const TCHAR* g_szNetfx40FullRegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full");
+const TCHAR* g_szNetfx40SPxRegValueName = _T("Servicing");
+const TCHAR* g_szNetfx45RegKeyName = _T("Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full");
+const TCHAR* g_szNetfx45RegValueName = _T("Release");
+const TCHAR* g_szNetfxStandardRegValueName = _T("Install");
+const TCHAR* g_szNetfxStandardSPxRegValueName = _T("SP");
+const TCHAR* g_szNetfxStandardVersionRegValueName = _T("Version");
 
 /* Version information for final release of .NET Framework 3.0 */
 const int g_iNetfx30VersionMajor = 3;
@@ -83,11 +83,15 @@ const int g_dwNetfx471ReleaseVersion = 461308;
 // Version information for final release of .NET Framework 4.7.2
 const int g_dwNetfx472ReleaseVersion = 461808;
 
+// Version information for final release of .NET Framework 4.8
+const int g_dwNetfx48ReleaseVersion = 528040;
+
+
 // Constants for known .NET Framework versions used with the GetRequestedRuntimeInfo API
-const TCHAR *g_szNetfx10VersionString = _T("v1.0.3705");
-const TCHAR *g_szNetfx11VersionString = _T("v1.1.4322");
-const TCHAR *g_szNetfx20VersionString = _T("v2.0.50727");
-const TCHAR *g_szNetfx40VersionString = _T("v4.0.30319");
+const TCHAR* g_szNetfx10VersionString = _T("v1.0.3705");
+const TCHAR* g_szNetfx11VersionString = _T("v1.1.4322");
+const TCHAR* g_szNetfx20VersionString = _T("v2.0.50727");
+const TCHAR* g_szNetfx40VersionString = _T("v4.0.30319");
 
 // Function prototypes
 BOOL CheckNetfxBuildNumber(const TCHAR*, const TCHAR*, const int, const int, const int, const int);
@@ -112,6 +116,7 @@ BOOL IsNetfx462Installed();
 BOOL IsNetfx47Installed();
 BOOL IsNetfx471Installed();
 BOOL IsNetfx472Installed();
+BOOL IsNetfx48Installed();
 BOOL RegistryGetValue(HKEY, const TCHAR*, const TCHAR*, DWORD, LPBYTE, DWORD);
 
 /******************************************************************
@@ -239,7 +244,7 @@ BOOL IsNetfx35Installed()
 	{
 		if (1 == dwRegValue)
 			printf(".NET Framework 3.5 is installed\r\n");
-			bRetValue = TRUE;
+		bRetValue = TRUE;
 	}
 
 	/* A system with a pre-release version of the .NET Framework 3.5 can
@@ -271,7 +276,7 @@ BOOL IsNetfx40ClientInstalled()
 			printf(".NET Framework 4 Client is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	/* A system with a pre-release version of the .NET Framework 4 can
@@ -303,7 +308,7 @@ BOOL IsNetfx40FullInstalled()
 			printf(".NET Framework 4 Full is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	/* A system with a pre-release version of the .NET Framework 4 can
@@ -335,7 +340,7 @@ BOOL IsNetfx45Installed()
 			printf(".NET Framework 4.5 is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	return bRetValue;
@@ -364,7 +369,7 @@ BOOL IsNetfx451Installed()
 			printf(".NET Framework 4.5.1 is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	return bRetValue;
@@ -393,7 +398,7 @@ BOOL IsNetfx452Installed()
 			printf(".NET Framework 4.5.2 is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	return bRetValue;
@@ -422,7 +427,7 @@ BOOL IsNetfx46Installed()
 			printf(".NET Framework 4.6 is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	return bRetValue;
@@ -451,7 +456,7 @@ BOOL IsNetfx461Installed()
 			printf(".NET Framework 4.6.1 is installed\r\n");
 			bRetValue = TRUE;
 		}
-			
+
 	}
 
 	return bRetValue;
@@ -569,6 +574,33 @@ BOOL IsNetfx472Installed()
 }
 
 /******************************************************************
+Function Name:	IsNetfx48Installed
+Description:	Uses the detection method recommended at
+				https://docs.microsoft.com/en-us/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed
+				to determine whether the .NET Framework 4.8 is
+				installed on the machine
+Inputs:         NONE
+Results:        true if the .NET Framework 4.8 is installed
+				false otherwise
+******************************************************************/
+BOOL IsNetfx48Installed()
+{
+	BOOL bRetValue = FALSE;
+	DWORD dwRegValue = 0;
+
+	if (RegistryGetValue(HKEY_LOCAL_MACHINE, g_szNetfx45RegKeyName, g_szNetfx45RegValueName, NULL, (LPBYTE)&dwRegValue, sizeof(DWORD)))
+	{
+		if (g_dwNetfx48ReleaseVersion <= dwRegValue)
+		{
+			printf(".NET Framework 4.8 is installed\r\n");
+			bRetValue = TRUE;
+		}
+	}
+
+	return bRetValue;
+}
+
+/******************************************************************
 Function Name:	GetNetfxSPLevel
 Description:	Determine what service pack is installed for a
 version of the .NET Framework using registry
@@ -578,7 +610,7 @@ Inputs:         pszNetfxRegKeyName - registry key name to use for detection
 pszNetfxRegValueName - registry value to use for detection
 Results:        integer representing SP level for .NET Framework
 ******************************************************************/
-int GetNetfxSPLevel(const TCHAR *pszNetfxRegKeyName, const TCHAR *pszNetfxRegValueName)
+int GetNetfxSPLevel(const TCHAR* pszNetfxRegKeyName, const TCHAR* pszNetfxRegValueName)
 {
 	DWORD dwRegValue = 0;
 
@@ -603,11 +635,11 @@ Inputs:         NONE
 Results:        TRUE if the build number in the registry is greater
 than or equal to the passed in version; FALSE otherwise
 ******************************************************************/
-BOOL CheckNetfxBuildNumber(const TCHAR *pszNetfxRegKeyName, const TCHAR *pszNetfxRegKeyValue, const int iRequestedVersionMajor, const int iRequestedVersionMinor, const int iRequestedVersionBuild, const int iRequestedVersionRevision)
+BOOL CheckNetfxBuildNumber(const TCHAR* pszNetfxRegKeyName, const TCHAR* pszNetfxRegKeyValue, const int iRequestedVersionMajor, const int iRequestedVersionMinor, const int iRequestedVersionBuild, const int iRequestedVersionRevision)
 {
 	TCHAR szRegValue[MAX_PATH];
-	TCHAR *pszToken = NULL;
-	TCHAR *pszNextToken = NULL;
+	TCHAR* pszToken = NULL;
+	TCHAR* pszNextToken = NULL;
 	int iVersionPartCounter = 0;
 	int iRegistryVersionMajor = 0;
 	int iRegistryVersionMinor = 0;
@@ -709,7 +741,7 @@ LPBYTE data - A buffer to save the retrieved data
 DWORD dwSize - The size of the data retrieved
 Results:		TRUE if successful, FALSE otherwise
 ******************************************************************/
-BOOL RegistryGetValue(HKEY hk, const TCHAR * pszKey, const TCHAR * pszValue, DWORD dwType, LPBYTE data, DWORD dwSize)
+BOOL RegistryGetValue(HKEY hk, const TCHAR* pszKey, const TCHAR* pszValue, DWORD dwType, LPBYTE data, DWORD dwSize)
 {
 	HKEY hkOpened;
 
@@ -782,17 +814,16 @@ int main()
 	BOOL bNetfx47Installed = (IsNetfx47Installed());
 	BOOL bNetfx471Installed = (IsNetfx471Installed());
 	BOOL bNetfx472Installed = (IsNetfx472Installed());
+	BOOL bNetfx48Installed = IsNetfx48Installed();
 
 	BOOL bDotNet = bNetfx10Installed || bNetfx11Installed || bNetfx20Installed ||
 		bNetfx30Installed || bNetfx35Installed || bNetfx451Installed ||
 		bNetfx452Installed || bNetfx46Installed || bNetfx461Installed ||
 		bNetfx462Installed || bNetfx47Installed || bNetfx471Installed ||
-		bNetfx472Installed;
+		bNetfx472Installed || bNetfx48Installed;
 
 	if (!bDotNet)
 		printf("On your system has not been found any .NET framework!\n\r\n\rPlease consider to install the latest .NET Framework: https://www.microsoft.com/de-de/download/details.aspx?id=30653");
 
 	return (int)bDotNet;
 }
-
-

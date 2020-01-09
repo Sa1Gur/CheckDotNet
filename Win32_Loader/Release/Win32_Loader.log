@@ -1,0 +1,59 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v150\Platforms\Win32\PlatformToolsets\v141_xp\Toolset.targets(39,5): warning MSB8051: Support for targeting Windows XP is deprecated and will not be present in future releases of Visual Studio. Please see https://go.microsoft.com/fwlink/?linkid=2023588 for more information.
+  Win32Analyser.c
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(135): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(135): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(154): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(154): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(182): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(182): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(211): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(211): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(243): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(243): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(272): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(272): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(304): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(304): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(336): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(336): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(338): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(365): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(365): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(367): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(394): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(394): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(396): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(423): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(423): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(425): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(452): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(452): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(454): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(480): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(480): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(482): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(508): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(508): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(510): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(536): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(536): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(538): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(564): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(564): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(566): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(591): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(591): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(593): warning C4018: '<=': signed/unsigned mismatch
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(617): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(617): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(651): warning C4047: 'function': 'DWORD' differs in levels of indirection from 'void *'
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(651): warning C4024: 'RegistryGetValue': different types for formal and actual parameter 4
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(785): warning C4101: 'szOutputString': unreferenced local variable
+C:\Users\samag\Desktop\CheckDotNet\Win32_Loader\Win32Analyser.c(784): warning C4101: 'szMessage': unreferenced local variable
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v150\Microsoft.CppBuild.targets(1220,5): warning MSB8030: The linker switch "Minimum Required Version" requires "SubSystem" to be set.  Without "SubSystem", the "Minimum Required Version" would not be passed to linker and could prevent to the output binary from running on older Operating Systems.
+  Generating code
+  2 of 24 functions ( 8.3%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    17 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Win32_Loader.vcxproj -> C:\Users\samag\Desktop\CheckDotNet\Release\Win32_Loader.exe

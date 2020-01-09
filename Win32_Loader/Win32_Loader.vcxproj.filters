@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Win32_Loader_Analyser\Win32Analyser.c">
+    <ClCompile Include="Win32Analyser.c">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
