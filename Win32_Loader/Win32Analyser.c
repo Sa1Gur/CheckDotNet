@@ -243,8 +243,10 @@ BOOL IsNetfx35Installed()
 	if (RegistryGetValue(HKEY_LOCAL_MACHINE, g_szNetfx35RegKeyName, g_szNetfxStandardRegValueName, NULL, (LPBYTE)&dwRegValue, sizeof(DWORD)))
 	{
 		if (1 == dwRegValue)
+		{
 			printf(".NET Framework 3.5 is installed\r\n");
-		bRetValue = TRUE;
+			bRetValue = TRUE;
+		}
 	}
 
 	/* A system with a pre-release version of the .NET Framework 3.5 can
